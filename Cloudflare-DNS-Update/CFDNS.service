@@ -1,0 +1,11 @@
+[Unit]
+Description=Periodically Update Cloudflare DNS
+
+[Service]
+Type=simple
+ExecStart=<Path>/CFDNS.sh <Zone ID> <Record ID> <Bearer Token> <Name>
+Restart=always
+RestartSec=3600
+
+[Install]
+WantedBy=multi-user.target
